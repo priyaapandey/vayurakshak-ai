@@ -1,0 +1,409 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, Arial, sans-serif;
+  background: #f4f7f6;
+  color: #17201d;
+}
+
+.app {
+  max-width: 1400px;
+  margin: auto;
+  padding: 24px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 32px;
+}
+
+.header p {
+  margin: 6px 0 0;
+  color: #68736f;
+}
+
+.india-badge {
+  padding: 10px 18px;
+  border-radius: 30px;
+  background: white;
+  border: 1px solid #dfe6e2;
+  font-weight: 600;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+  margin-bottom: 20px;
+}
+
+.stat-card {
+  background: white;
+  border: 1px solid #e2e8e5;
+  border-radius: 14px;
+  padding: 18px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.stat-card span {
+  font-size: 25px;
+}
+
+.stat-card small {
+  display: block;
+  color: #78827f;
+}
+
+.stat-card strong {
+  font-size: 24px;
+}
+
+.main-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.panel {
+  background: white;
+  border: 1px solid #e1e8e4;
+  border-radius: 16px;
+  padding: 22px;
+  margin-bottom: 20px;
+}
+
+.panel h2 {
+  margin-top: 0;
+}
+
+.panel-header p,
+.section-title p,
+.report-panel p {
+  color: #78827f;
+  margin-top: -5px;
+}
+
+.section-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.map {
+  height: 400px;
+  border-radius: 14px;
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 30% 40%, #d9efdc 0 2%, transparent 3%),
+    radial-gradient(circle at 70% 60%, #d9efdc 0 2%, transparent 3%),
+    #eaf1ed;
+}
+
+.india-shape {
+  position: absolute;
+  font-size: 180px;
+  left: 42%;
+  top: 23%;
+  opacity: 0.2;
+}
+
+.map-marker {
+  position: absolute;
+  font-size: 25px;
+  text-align: center;
+}
+
+.map-marker span {
+  display: block;
+  font-size: 12px;
+  font-weight: 600;
+  background: white;
+  padding: 4px 7px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px #0002;
+}
+
+.delhi {
+  left: 53%;
+  top: 20%;
+}
+
+.mumbai {
+  left: 32%;
+  top: 58%;
+}
+
+.bengaluru {
+  left: 48%;
+  top: 75%;
+}
+
+.hyderabad {
+  left: 58%;
+  top: 62%;
+}
+
+.upload-box {
+  height: 220px;
+  border: 2px dashed #bbc8c2;
+  border-radius: 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.upload-box:hover {
+  border-color: #3b7d55;
+}
+
+.upload-box input {
+  display: none;
+}
+
+.upload-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.upload-icon {
+  font-size: 50px;
+  margin-bottom: 10px;
+}
+
+.upload-box small {
+  color: #78827f;
+  margin-top: 5px;
+}
+
+.location {
+  background: #f1f5f3;
+  padding: 12px;
+  border-radius: 10px;
+  margin: 14px 0;
+}
+
+.primary-button,
+.alert-button {
+  border: none;
+  background: #216e3a;
+  color: white;
+  padding: 13px 18px;
+  border-radius: 10px;
+  font-weight: 700;
+  cursor: pointer;
+  width: 100%;
+}
+
+.primary-button:hover,
+.alert-button:hover {
+  background: #18582e;
+}
+
+.primary-button:disabled {
+  opacity: 0.6;
+}
+
+.analysis-error {
+  color: #a12622;
+  margin: 12px 0 0;
+}
+
+.analysis-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+.analysis-card {
+  background: #f5f8f6;
+  padding: 18px;
+  border-radius: 12px;
+}
+
+.analysis-card small {
+  color: #7a8580;
+  display: block;
+  margin-bottom: 7px;
+}
+
+.danger {
+  color: #c62828;
+}
+
+.confidence {
+  background: #e3f4e7;
+  color: #216e3a;
+  padding: 9px 13px;
+  border-radius: 20px;
+  font-weight: 700;
+}
+
+.evidence {
+  margin-top: 20px;
+  background: #f8faf9;
+  border-radius: 12px;
+  padding: 18px;
+}
+
+.evidence-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.evidence-list span {
+  background: white;
+  padding: 8px 12px;
+  border-radius: 20px;
+  border: 1px solid #e0e7e3;
+}
+
+.summary {
+  color: #58635e;
+  margin-bottom: 0;
+}
+
+.forecast {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+}
+
+.forecast-card {
+  text-align: center;
+  background: #f6f8f7;
+  padding: 20px;
+  border-radius: 14px;
+}
+
+.forecast-value {
+  font-size: 32px;
+  font-weight: 800;
+  margin: 10px 0;
+}
+
+.forecast-card span {
+  color: #78827f;
+  font-size: 12px;
+}
+
+.risk-badge {
+  background: #ffe7e7;
+  color: #c62828;
+  padding: 8px 14px;
+  border-radius: 20px;
+  font-weight: 700;
+}
+
+.alert-preview {
+  background: #fff5f5;
+  border: 1px solid #ffd7d7;
+  border-radius: 12px;
+  padding: 18px;
+}
+
+.alert-preview p {
+  margin-bottom: 6px;
+}
+
+.alert-button {
+  width: auto;
+  margin-top: 10px;
+  background: #c62828;
+}
+
+.authority-panel select {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccd5d1;
+}
+
+.success {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  background: #edf8ef;
+  border: 1px solid #c9e8ce;
+  padding: 20px;
+  border-radius: 12px;
+}
+
+.success-icon {
+  font-size: 35px;
+  background: #2e7d32;
+  color: white;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.language-tags {
+  display: flex;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.language-tags span {
+  background: white;
+  padding: 7px 10px;
+  border-radius: 8px;
+}
+
+.pipeline {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  overflow-x: auto;
+  padding: 20px 0;
+}
+
+.pipeline-item {
+  min-width: 120px;
+  text-align: center;
+  background: #f3f7f4;
+  padding: 15px;
+  border-radius: 12px;
+}
+
+.pipeline-item div {
+  font-size: 30px;
+  margin-bottom: 7px;
+}
+
+.pipeline-item span {
+  font-size: 12px;
+  font-weight: 600;
+}
+
+@media (max-width: 900px) {
+  .stats,
+  .analysis-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .main-grid {
+    grid-template-columns: 1fr;
+  }
+}
